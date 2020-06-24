@@ -32,7 +32,6 @@
                     <td><input></input></td>
                 </tr>';
         }
-        $result->free();
     }
     else {
         echo "No data found";
