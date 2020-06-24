@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoshin Konori</title>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+
+    <script src="/javascript/jquery.js"></script>
+    <script src="/javascript/popperjs.js"></script>
+    <script src="/javascript/bootstrapjs.js"></script>
+    <script type="text/javascript" src="/javascript/javascript.js"></script>
+  </head>
+
+  <body class="bg-medium">
+    <div class="container">
+      <div class="row vertical-center">
+        <!--[0,0]-->
+        <div class="col container bg-light shadow-lg m-4 rounded-lg">
+          <div class="row">
+            <button
+              type="button"
+              class="col btn btn-primary p-3 m-4"
+              data-toggle="modal"
+              data-target="#ObjectiveCreationModal"
+            >
+              Objective Creation
+            </button>
+            <button
+              type="button"
+              class="col btn btn-primary p-3 m-4"
+              data-toggle="modal"
+              data-target="#TargetEntryModal"
+            >
+              Target Entry
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://www.w3schools.com/lib/w3.js"></script>
+  <div w3-include-html="/modals/targetEntry.html"></div>
+  <div w3-include-html="/modals/objCreation.html"></div>
+  <script>
+    w3.includeHTML();
+  </script>
+</html>
