@@ -23,5 +23,7 @@
             echo "Error: " . $sql . "<br>" . $conn->error;
         } 
     #}
-    return
+    
+    header("Location: ../index.html");
+    
 ?>

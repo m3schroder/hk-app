@@ -1,11 +1,10 @@
 <div
   id="TargetEntryModal"
   class="modal fade"
-  tabindex="-1"
   role="dialog"
   aria-labelledby="TargetEntryModal"
 >
-  <div class="modal-dialog modal-xl modal-dialog-centered">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-body">
@@ -18,9 +17,9 @@
           >
             <span aria-hidden="true">&times;</span>
           </button>
-          <div class="form-group p-4 mx-auto rounded-lg">
-            <div class="form-group row">
-              <div class="col">
+          <div class="form-group mx-auto rounded-lg">
+            <div class="form-group p-4 row">
+              <div class="col w-25">
                 <label for="plant">Plant</label>
                 <select class="form-control shadow-sm" id="plant" name="plant">
                   <option selected disabled hidden>Plant</option>
@@ -29,7 +28,7 @@
                   <option>Decherd</option>
                 </select>
               </div>
-              <div class="col">
+              <div class="col w-25">
                 <label for="level">Level</label>
                 <select class="form-control shadow-sm" id="level" name="level">
                   <option selected disabled hidden>Level</option>
@@ -39,7 +38,7 @@
                   <option>Engineer</option>
                 </select>
               </div>
-              <div class="col">
+              <div class="col w-25">
                 <label for="type">Type</label>
                 <select class="form-control shadow-sm" id="type" name="type">
                   <option selected disabled hidden>Type</option>
@@ -49,7 +48,7 @@
                   <option>Routine Management</option>
                 </select>
               </div>
-              <div class="col">
+              <div class="col w-25">
                 <label for="resp">Responsible</label>
                 <input
                   type="text"
@@ -61,10 +60,27 @@
               </div>
             </div>
             <div class="text-center">
-              <input type="submit" class="btn btn-primary" />
+              <input
+                id="targetSubmit"
+                type="submit"
+                class="btn btn-primary w-25"
+              />
+              <div
+                style="display: none;"
+                id="targetOptions"
+                class="text-center"
+              >
+                <button type="submit" class="btn btn-warning w-25">
+                  Refresh
+                </button>
+                <button type="button" class="btn btn-danger w-25">
+                  Clear
+                </button>
+              </div>
             </div>
           </div>
         </form>
+
         <div id="targetResponse"></div>
       </div>
     </div>
