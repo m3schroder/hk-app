@@ -6,19 +6,20 @@
   role="dialog"
   aria-labelledby="ObjectiveCreationModal"
 >
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-body">
-        <form id="form1" action="/php/objCreation.php" method="POST">
-          <button
+                  <button
             type="button"
-            class="close m-3"
+            class="close"
             data-dismiss="modal"
             aria-label="Close"
           >
             <span aria-hidden="true">&times;</span>
           </button>
+        </br>
+        <form id="form1" action="/php/objCreation.php" method="POST">
           <div class="form-group p-4 mx-auto rounded-lg">
             <div class="form-group row">
               <div class="col">
@@ -148,7 +149,7 @@
               </div>
             </div>
             <div class="text-center">
-              <input type="submit" class="btn btn-primary" value="submit" />
+              <input type="submit" class="btn btn-primary w-25" value="submit" />
             </div>
           </div>
         </form>
