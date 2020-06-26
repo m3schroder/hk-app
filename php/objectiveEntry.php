@@ -24,6 +24,4 @@
         } 
     #}
     
-    header("Location: ../index.html");
-    
 ?>

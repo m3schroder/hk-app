@@ -11,10 +11,10 @@
 
     $result = $conn->query($sql);
 
-    //if ($result === false) {
-    //    echo "Error: " . $sql . "<br>" . $conn->error;
-    //}
-    //else {
+    if ($result === false) {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    else {
            echo '<table class = "table table-striped" border="0" cellspacing="3" cellpadding="2"> 
             <tr> 
                 <td> <font face="Arial">Plant</font> </td> 
@@ -33,9 +33,10 @@
                         <td>'.$row["type"].'</td> 
                         <td>'.$row["obj"].'</td> 
                         <td>'.$row["strat"].'</td> 
-                        <td><input></input></td>
+                        <td><input/></td>
                     </tr>';
             }
         echo '</table>';
-    //    }
+        }
+        $result->free();
 ?>
