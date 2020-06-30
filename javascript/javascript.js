@@ -39,7 +39,7 @@ $("#ObjectiveCreationModal").on("hide.bs.modal", function () {
 });
 
 //Submit target search
-$("#targetSubmit").on("click", function (e) {
+$("#targetSearchSubmit").on("click", function (e) {
   e.preventDefault();
   $.ajax("./php/targetEntry.php", {
     method: "POST",
@@ -48,8 +48,9 @@ $("#targetSubmit").on("click", function (e) {
     dataType: "html",
     success: function (response) {
       $("#targetResponse").html(response);
-      $("#targetSubmit").toggle();
-      $("#targetOptions").toggle();
+      $("#targetOptions").show();
+      $("#targetSearchSubmit").hide();
+      $.getScript("./javascript/javascript.js");
     },
     error: function (errorThrown) {
       alert(errorThrown);
@@ -78,7 +79,24 @@ $("#targetTableRefresh").on("click", function (e) {
 $("#targetSearchReset").on("click", function (e) {
   e.preventDefault();
   $("#targetResponse").empty();
-  $("#targetSubmit").show();
+  $("#targetSearchSubmit").show();
   $("#targetOptions").hide();
   $("#targetSearch").trigger("reset");
+});
+
+$("#targetSubmit").on("click", function (e) {
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  $.ajax("./php/targetEntrySubmit.php", {
+    method: "POST",
+    async: true,
+    cache: false,
+    data: $("#targetTableForm").serializeArray(),
+    success: function (response) {
+      alert(response);
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      alert(errorThrown);
+    },
+  });
 });

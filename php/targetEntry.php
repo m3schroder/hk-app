@@ -15,6 +15,7 @@
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
     else {
+           echo '<form id = "targetTableForm">';
            echo '<table class = "table table-striped" border="0" cellspacing="3" cellpadding="2"> 
             <tr> 
                 <td> <font face="Arial">Plant</font> </td> 
@@ -32,11 +33,13 @@
                         <td>'.$row["level"].'</td> 
                         <td>'.$row["type"].'</td> 
                         <td>'.$row["obj"].'</td> 
-                        <td>'.$row["strat"].'</td> 
-                        <td><input/></td>
+                        <td>'.$row["strat"].'</td>
+                        <td><input class = "targets" name = "targets[]"/></td>
+                        <td><input name = "ids[]" style = "display: none;" value = '.$row["id"].'/></td> 
                     </tr>';
             }
-        echo '</table>';
+            echo '</table>';
+            echo '</form>';
         }
         $result->free();
 ?>
